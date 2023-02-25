@@ -1,7 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 
-body{
-    font-family: 'Poppins', sans-serif;
+// Global variables
+$primary-color: #2196f3;
+$secondary-color: #f50057;
+$font-size: 16px;
+
+// Import other scss files
+// @import "mixins";
+@import "./base/variables";
+@import "./base/_typography";
+@import "./base/reset";
+@import "./layout/header";
+@import "./layout/footer";
+
+// Global styles
+body {
+  font-family: $font-family-base;
+  font-size: $font-size;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-normal;
+}
 
+a {
+  color: $primary-color;
+  text-decoration: none;
+  &:hover {
+    color: $secondary-color;
+  }
+}

@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+// Define variables for font family and weights
+$font-family-base: 'Poppins', sans-serif;
+$font-weight-light: 300;
+$font-weight-normal: 500;
+$font-weight-bold: 700;
+
+// Define mixins for font styles
+@mixin font-size($size) {
+  font-size: $size;
+}
+
+@mixin font-weight($weight) {
+  font-weight: $weight;
+}
+
+// Define classes for commonly used font styles
+.text-primary {
+  font-family: $font-family-base;
+  @include font-size(16px);
+  @include font-weight($font-weight-normal);
+}
+
+.text-heading {
+  font-family: $font-family-base;
+  @include font-size(24px);
+  @include font-weight($font-weight-bold);
+}

@@ -1,9 +1,14 @@
-import React from 'react'
+import { React } from 'react';
+import TodoItem from '../todoItem/TodoItem';
 
-const TodoList = () => {
+const TodoList = ({ todos, handleUpdateTodo, deleteTodo }) => {
   return (
-    <div>TodoList</div>
-  )
+    <ul>
+      {todos?.map((todo) => (
+        <TodoItem key={todo.id} todo={todo} handleUpdateTodo={handleUpdateTodo} deleteTodo={deleteTodo} />
+      ))}
+    </ul>
+  );
 }
 
 export default TodoList
