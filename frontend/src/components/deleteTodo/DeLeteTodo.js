@@ -1,9 +1,17 @@
 import React from 'react'
 
-const DeLeteTodo = () => {
+const DeleteTodo = ({ todo, deleteTodo }) => {
+
+  const handleDelete = (e) => {
+    e.preventDefault();
+    deleteTodo(todo.id);
+  };
+
   return (
-    <div>DeLeteTodo</div>
-  )
+    <form onSubmit={handleDelete}>
+      <button type="submit">Delete</button>
+    </form>
+  );
 }
 
-export default DeLeteTodo
+export default DeleteTodo
