@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React } from 'react';
 import TodoItem from '../todoItem/TodoItem';
 
 
@@ -7,7 +7,7 @@ const TodoList = ({ todos, handleUpdateTodo, deleteTodo }) => {
 
 
   return (
-    <ul>
+    <div className='todoList-container'>
       {todos?.map((todo) => (
         <TodoItem 
           key={todo.id} 
@@ -15,7 +15,7 @@ const TodoList = ({ todos, handleUpdateTodo, deleteTodo }) => {
           handleUpdateTodo={handleUpdateTodo} 
           deleteTodo={deleteTodo} />
       ))}
-    </ul>
+    </div>
 
   );
 }

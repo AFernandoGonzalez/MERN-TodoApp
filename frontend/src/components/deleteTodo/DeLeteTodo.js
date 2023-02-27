@@ -8,9 +8,11 @@ const DeleteTodo = ({ todo, deleteTodo }) => {
   };
 
   return (
-    <form onSubmit={handleDelete}>
-      <button type="submit">Delete</button>
-    </form>
+    <div className='delete-container'>
+      <form className='form' onSubmit={handleDelete}>
+        <button className='button' type="submit">Delete</button>
+      </form>
+    </div>
   );
 }
 

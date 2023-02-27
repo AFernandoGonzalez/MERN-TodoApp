@@ -4,6 +4,7 @@ import AddTodo from './components/addTodo/AddTodo';
 import Filter from './components/filterTodo/Filter';
 import Search from './components/searchTodo/Search';
 import ListHistory from './components/listHistory/ListHistory';
+import Header from './components/header/Header'
 
 const App = () => {
   const [todos, setTodos] = useState([]);
@@ -87,8 +88,8 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-      <h1>Todo App</h1>
+    <div className="todo-app">
+      <Header/>
       <Search handleSearch={handleSearch} />
       <Filter handleFilter={handleFilter} />
       <AddTodo addTodo={handleAddTodo} />

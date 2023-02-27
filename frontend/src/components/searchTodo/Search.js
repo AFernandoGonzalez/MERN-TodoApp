@@ -1,7 +1,6 @@
 import { React, useState } from 'react'
 
 const Search = ({ handleSearch }) => {
-
     const [searchValue, setSearchValue] = useState("");
 
     const handleChange = (e) => {
@@ -10,8 +9,8 @@ const Search = ({ handleSearch }) => {
     };
 
     return (
-        <div>
-            <label htmlFor="search">Search: </label>
+        <div className='search-container'>
+            <label >Search: </label>
             <input
                 type="text"
                 id="search"

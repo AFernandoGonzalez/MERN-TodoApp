@@ -6,7 +6,7 @@ const TodoItem = ({ todo, handleUpdateTodo, deleteTodo }) => {
   const [isEditing, setEditing] = useState(false);
 
   const onUpdated = (updatedTodo) => {
-    handleUpdateTodo(todo.id, updatedTodo, !todo.completed );
+    handleUpdateTodo(todo.id, updatedTodo, !todo.completed);
     setEditing(false);
   };
 
@@ -19,23 +19,33 @@ const TodoItem = ({ todo, handleUpdateTodo, deleteTodo }) => {
   };
 
   return (
-    <li>
+    <div className='todoItem-container'>
       {isEditing ? (
-        <UpdateTodo todo={todo} handleUpdateTodo={onUpdated} handleCancel={handleCancel} />
+        <UpdateTodo
+          todo={todo}
+          handleUpdateTodo={onUpdated}
+          handleCancel={handleCancel} />
       ) : (
-        <div>
-          <h3>{todo.title}</h3>
+        <div className='todoItem'>
+          <h3 className='todoTitle'>{todo.title}</h3>
           <span>completed: </span>
           <input
+            className='todoCheckbox'
             type="checkbox"
             checked={todo.completed}
             onChange={onUpdated}
           />
-          <button onClick={handleEdit}>Edit</button>
-          <DeleteTodo todo={todo} deleteTodo={deleteTodo} />
+          <button
+            className='button'
+            onClick={handleEdit}>Edit
+          </button>
+          <DeleteTodo
+            todo={todo}
+            deleteTodo={deleteTodo}
+          />
         </div>
       )}
-    </li>
+    </div>
   );
 }
 

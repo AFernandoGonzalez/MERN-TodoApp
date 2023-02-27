@@ -15,16 +15,22 @@ const UpdateTodo = ({ todo, handleUpdateTodo, handleCancel }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type='text'
-        placeholder='Update Todo...'
-        value={newTitle}
-        onChange={handleChange}
-      />
-      <button onClick={handleCancel}>Cancel</button>
-      <button type='submit' >Update</button>
-    </form>
+    <div className='updateTodo-container'>
+      <form className='form'
+        onSubmit={handleSubmit}>
+        <input
+          type='text'
+          placeholder='Update Todo...'
+          value={newTitle}
+          onChange={handleChange}
+        />
+        <button className='button'
+          onClick={handleCancel}>Cancel
+        </button>
+        <button className='button' type='submit' >Update
+        </button>
+      </form>
+    </div>
   );
 }
 

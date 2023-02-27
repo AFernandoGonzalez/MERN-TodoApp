@@ -9,8 +9,8 @@ const Filter = ({ handleFilter }) => {
   };
 
   return (
-    <div>
-      <label htmlFor="filter">Filter: </label>
+    <div className='filter-container'>
+      <label >Filter: </label>
       <select id="filter" value={filterValue} onChange={handleChange}>
         <option value="all">All</option>
         <option value="completed">Completed</option>

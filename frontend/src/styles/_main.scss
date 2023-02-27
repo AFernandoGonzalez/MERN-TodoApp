@@ -1,7 +1,8 @@
 
 // Global variables
-$primary-color: #2196f3;
-$secondary-color: #f50057;
+$primary-color: #2E3840;
+$danger-color: #EB455F;
+$background-color: #F5EA5A;
 $font-size: 16px;
 
 // Import other scss files
@@ -9,8 +10,6 @@ $font-size: 16px;
 @import "./base/variables";
 @import "./base/_typography";
 @import "./base/reset";
-@import "./layout/header";
-@import "./layout/footer";
 
 // Global styles
 body {
