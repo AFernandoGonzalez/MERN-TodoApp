@@ -36,8 +36,9 @@ const TodoItem = ({ todo, handleUpdateTodo, deleteTodo }) => {
             onChange={onUpdated}
           />
           <button
-            className='button'
-            onClick={handleEdit}>Edit
+            className='btn '
+            onClick={handleEdit}>
+            <i class="fa-regular fa-pen-to-square"></i>
           </button>
           <DeleteTodo
             todo={todo}

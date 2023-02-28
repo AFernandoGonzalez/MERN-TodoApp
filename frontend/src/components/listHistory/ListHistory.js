@@ -1,20 +1,21 @@
 import React from 'react'
+import './ListHistory.scss'
 
 const ListHistory = ({ handleUndo, handleRedo, currentHistoryIndex, todoListHistory, handleHistoryClick }) => {
     return (
         <div className='listHistory-container'>
             <div className="undo-redo-buttons">
                 <button
-                    className='button'
+                    className='btn btn-warning m-sm'
                     onClick={handleUndo}
                     disabled={currentHistoryIndex === 0}>
-                    Undo
+                    <i class="fa-solid fa-rotate-left"></i>
                 </button>
                 <button
-                    className='button'
+                    className='btn btn-warning m-sm'
                     onClick={handleRedo}
                     disabled={currentHistoryIndex === todoListHistory.length - 1}>
-                    Redo
+                    <i class="fa-solid fa-rotate-right"></i>
                 </button>
             </div>
             <div className="history-container">
@@ -27,9 +28,10 @@ const ListHistory = ({ handleUndo, handleRedo, currentHistoryIndex, todoListHist
                                     <strong>Current: </strong>
                                 ) : (
                                     <button
-                                        className='button'
+                                        className='btn btn-primary'
                                         onClick={() => handleHistoryClick(index)}
-                                    >Go to
+                                    >
+                                    <i class="fa-solid fa-hand-point-left"></i>
                                     </button>
                                 )}
                             </div>

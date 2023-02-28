@@ -1,10 +1,32 @@
 // Colors
-$primary-color: #007bff;
-$secondary-color: #6c757d;
+
+// Global variables
+$primary-color: #2E3840;
+$secondary-color: #7DB9B6;
+$text-color: #F5F5F5;
+// $hover-color: #7DB9B6;
+$disabled-color: #D8D9CF;
+$tl-bg-color: #F5EA5A;
+$hl-bg-color: #EDEDED;
+
+$btn-primary: #3AB0FF;
+$btn-hover-primary: #1C6DD0;
+$btn-danger: #EB455F;
+$btn-hover-danger: #ea314d;
+$btn-warning: #f8c83a;
+$btn-hover-warning: #ffc107;
 $success-color: #28a745;
-$danger-color: #dc3545;
+$danger-color: #EB455F;
 $warning-color: #ffc107;
 $info-color: #17a2b8;
+
+$margin-sm: 8px;
+$margin-md: 16px;
+$margin-lg: 24px;
+
+$padding-sm: 8px;
+$padding-md: 16px;
+$padding-lg: 24px;
 
 // Breakpoints
 $breakpoint-xs: 0;

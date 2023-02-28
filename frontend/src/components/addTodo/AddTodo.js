@@ -1,4 +1,5 @@
 import { React, useState } from 'react'
+import '../../styles/components/_buttons.scss'
 
 const AddTodo = ({ addTodo }) => {
   const [newTodo, setNewTodo] = useState("");
@@ -26,7 +27,7 @@ const AddTodo = ({ addTodo }) => {
           onChange={(e) => setNewTodo(e.target.value)}
         />
         <span className='form-alert'>{alert ? "Enter a task" : ""}</span>
-        <button className='button' type="submit">Add</button>
+        <button className='btn btn-primary' type="submit"><i class="fa-thin fa-plus"></i></button>
       </form>
     </div>
   );

@@ -16,14 +16,14 @@ $font-weight-bold: 700;
 }
 
 // Define classes for commonly used font styles
-.text-primary {
-  font-family: $font-family-base;
-  @include font-size(16px);
-  @include font-weight($font-weight-normal);
-}
+// .text-primary {
+//   font-family: $font-family-base;
+//   @include font-size(16px);
+//   @include font-weight($font-weight-normal);
+// }
 
-.text-heading {
-  font-family: $font-family-base;
-  @include font-size(24px);
-  @include font-weight($font-weight-bold);
-}
+// .text-heading {
+//   font-family: $font-family-base;
+//   @include font-size(24px);
+//   @include font-weight($font-weight-bold);
+// }

@@ -1,0 +1,60 @@
+@import "../base/variables";
+
+.btn {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 50px;
+    // background-color: $btn-color ;
+    color: $text-color;
+    border: none;
+    cursor: pointer;
+  
+    &:hover,
+    &:focus {
+    //   background-color:  $btn-hover-color;
+      outline: none;
+    }
+  
+    &:active {
+      background-color: $btn-primary;
+    }
+  
+    &:disabled {
+      background-color: $disabled-color;
+      cursor: not-allowed;
+    }
+  }
+  
+.btn-primary {
+    background-color: $btn-primary ;
+    &:hover,
+    &:focus {
+      background-color:  $btn-hover-primary;
+      outline: none;
+    }
+}
+
+.btn-danger {
+    background-color: $btn-danger;
+    &:hover,
+    &:focus {
+      background-color:  $btn-hover-danger;
+      outline: none;
+    }
+}
+
+.btn-warning {
+    background-color: $btn-warning;
+    &:hover,
+    &:focus {
+      background-color:  $btn-hover-warning;
+      outline: none;
+    }
+}
+
+.btn-disabled {
+    background-color: $disabled-color ;
+}

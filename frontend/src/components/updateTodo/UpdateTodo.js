@@ -24,10 +24,12 @@ const UpdateTodo = ({ todo, handleUpdateTodo, handleCancel }) => {
           value={newTitle}
           onChange={handleChange}
         />
-        <button className='button'
-          onClick={handleCancel}>Cancel
+        <button className='btn'
+          onClick={handleCancel}>
+          <i class="fa-solid fa-xmark"></i>
         </button>
-        <button className='button' type='submit' >Update
+        <button className='btn' type='submit' >
+        <i class="fa-solid fa-check"></i>
         </button>
       </form>
     </div>

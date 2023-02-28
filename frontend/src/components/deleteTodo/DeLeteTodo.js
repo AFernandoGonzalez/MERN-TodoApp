@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../styles/components/_buttons.scss'
 
 const DeleteTodo = ({ todo, deleteTodo }) => {
 
@@ -10,7 +11,7 @@ const DeleteTodo = ({ todo, deleteTodo }) => {
   return (
     <div className='delete-container'>
       <form className='form' onSubmit={handleDelete}>
-        <button className='button' type="submit">Delete</button>
+        <button className='btn btn-danger' type="submit"><i class="fa-solid fa-trash"></i></button>
       </form>
     </div>
   );
