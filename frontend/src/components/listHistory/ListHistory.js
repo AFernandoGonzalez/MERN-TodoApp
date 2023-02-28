@@ -28,7 +28,7 @@ const ListHistory = ({ handleUndo, handleRedo, currentHistoryIndex, todoListHist
                                     <strong>Current: </strong>
                                 ) : (
                                     <button
-                                        className='btn btn-primary'
+                                        className='btn text-color'
                                         onClick={() => handleHistoryClick(index)}
                                     >
                                     <i class="fa-solid fa-hand-point-left"></i>
