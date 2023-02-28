@@ -2,7 +2,6 @@ import { React, useState } from 'react'
 
 const UpdateTodo = ({ todo, handleUpdateTodo, handleCancel }) => {
   const [newTitle, setNewTitle] = useState(todo.title);
-  console.log(newTitle);
 
   const handleChange = (e) => {
     setNewTitle(e.target.value);
@@ -24,14 +23,14 @@ const UpdateTodo = ({ todo, handleUpdateTodo, handleCancel }) => {
           value={newTitle}
           onChange={handleChange}
         />
-        <button className='btn btn-danger'
-          onClick={handleCancel}>
-          <i class="fa-solid fa-xmark"></i>
-        </button>
         <button className='btn btn-primary' type='submit' >
-        <i class="fa-solid fa-check"></i>
+          <i className="fa-solid fa-check"></i>
         </button>
       </form>
+      <button className='btn btn-danger'
+        onClick={() => handleCancel()}>
+        <i className="fa-solid fa-xmark"></i>
+      </button>
     </div>
   );
 }

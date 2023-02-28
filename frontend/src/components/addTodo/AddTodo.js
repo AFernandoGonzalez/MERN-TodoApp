@@ -27,7 +27,7 @@ const AddTodo = ({ addTodo }) => {
           onChange={(e) => setNewTodo(e.target.value)}
         />
         <span className='form-alert'>{alert ? "Enter a task" : ""}</span>
-        <button className='btn btn-primary' type="submit"><i class="fa-thin fa-plus"></i></button>
+        <button className='btn btn-primary' type="submit"><i className="fa-thin fa-plus"></i></button>
       </form>
     </div>
   );

@@ -6,8 +6,13 @@ const TodoItem = ({ todo, handleUpdateTodo, deleteTodo }) => {
   const [isEditing, setEditing] = useState(false);
 
   const onUpdated = (updatedTodo) => {
-    handleUpdateTodo(todo.id, updatedTodo, !todo.completed);
+    handleUpdateTodo(todo.id, updatedTodo);
     setEditing(false);
+  };
+
+  const handleToggle = () => {
+    const updatedTodo = { ...todo, completed: !todo.completed };
+    handleUpdateTodo(todo.id, updatedTodo);
   };
 
   const handleEdit = () => {
@@ -18,27 +23,29 @@ const TodoItem = ({ todo, handleUpdateTodo, deleteTodo }) => {
     setEditing(false);
   };
 
+
   return (
     <div className='todoItem-container'>
       {isEditing ? (
         <UpdateTodo
           todo={todo}
           handleUpdateTodo={onUpdated}
-          handleCancel={handleCancel} />
+          handleCancel={handleCancel}
+        />
       ) : (
         <div className='todoItem'>
-          <h3 className='todoTitle'>{todo.title}</h3>
-          <span>completed: </span>
           <input
             className='todoCheckbox'
             type="checkbox"
             checked={todo.completed}
-            onChange={onUpdated}
+            onChange={handleToggle}
           />
+          <h3 className='todoTitle'>{todo.title}</h3>
+          {/* <span>completed: </span> */}
           <button
             className='btn '
             onClick={handleEdit}>
-            <i class="fa-regular fa-pen-to-square"></i>
+            <i className="fa-regular fa-pen-to-square"></i>
           </button>
           <DeleteTodo
             todo={todo}

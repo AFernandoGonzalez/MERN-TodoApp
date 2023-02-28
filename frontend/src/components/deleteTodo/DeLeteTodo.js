@@ -11,7 +11,7 @@ const DeleteTodo = ({ todo, deleteTodo }) => {
   return (
     <div className='delete-container'>
       <form className='form' onSubmit={handleDelete}>
-        <button className='btn btn-danger' type="submit"><i class="fa-solid fa-trash"></i></button>
+        <button className='btn btn-danger' type="submit"><i className="fa-solid fa-trash"></i></button>
       </form>
     </div>
   );

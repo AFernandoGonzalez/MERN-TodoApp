@@ -9,13 +9,13 @@ const ListHistory = ({ handleUndo, handleRedo, currentHistoryIndex, todoListHist
                     className='btn btn-warning m-sm'
                     onClick={handleUndo}
                     disabled={currentHistoryIndex === 0}>
-                    <i class="fa-solid fa-rotate-left"></i>
+                    <i className="fa-solid fa-rotate-left"></i>
                 </button>
                 <button
                     className='btn btn-warning m-sm'
                     onClick={handleRedo}
                     disabled={currentHistoryIndex === todoListHistory.length - 1}>
-                    <i class="fa-solid fa-rotate-right"></i>
+                    <i className="fa-solid fa-rotate-right"></i>
                 </button>
             </div>
             <div className="history-container">
@@ -31,7 +31,7 @@ const ListHistory = ({ handleUndo, handleRedo, currentHistoryIndex, todoListHist
                                         className='btn text-color'
                                         onClick={() => handleHistoryClick(index)}
                                     >
-                                    <i class="fa-solid fa-hand-point-left"></i>
+                                    <i className="fa-solid fa-hand-point-left"></i>
                                     </button>
                                 )}
                             </div>

@@ -32,7 +32,7 @@ const App = () => {
 
   const handleUpdateTodo = (id, updatedTodo) => {
     const updatedTodos = todos.map(todo =>
-      todo.id === id ? { ...todo, ...updatedTodo, completed: !todo.completed } : todo);
+      todo.id === id ? { ...todo, ...updatedTodo} : todo);
     setTodos(updatedTodos);
     setTodoListHistory([...todoListHistory, updatedTodos]);
     setCurrentHistoryIndex(currentHistoryIndex + 1);
