@@ -19,7 +19,7 @@ const UpdateTodo = ({ todo, handleUpdateTodo, handleCancel }) => {
       <form className='form'
         onSubmit={handleSubmit}>
         <input
-        maxLength={55}
+          maxLength={55}
           className='updateItem'
           type='text'
           placeholder='Update Todo...'

@@ -24,7 +24,7 @@ const AddTodo = ({ addTodo }) => {
       <form className='form add-todo-form' onSubmit={handleSubmit}>
         <input
           type="text"
-          maxlength="55"
+          maxLength="55"
           placeholder=" + Add Task"
           value={newTodo}
           onChange={(e) => setNewTodo(e.target.value)}

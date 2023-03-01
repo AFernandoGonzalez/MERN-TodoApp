@@ -22,10 +22,10 @@ const ListHistory = ({ handleUndo, handleRedo, currentHistoryIndex, todoListHist
                 <h2>History</h2>
                 <ul>
                     {todoListHistory.map((todoList, index) => (
-                        <li key={index}>
-                            <div>
+                        <li className='row' key={index}>
+                            <div className='left'>
                                 {index === currentHistoryIndex ? (
-                                    <strong>Current: </strong>
+                                    <strong>Latest Task Added: </strong>
                                 ) : (
                                     <button
                                         className='btn text-color'
@@ -35,7 +35,7 @@ const ListHistory = ({ handleUndo, handleRedo, currentHistoryIndex, todoListHist
                                     </button>
                                 )}
                             </div>
-                            <div className='list-history'>
+                            <div className='right'>
                                 {todoList.map((todo) => (
                                     <p key={todo.id}>{todo.title}</p>
                                 ))}
@@ -43,6 +43,7 @@ const ListHistory = ({ handleUndo, handleRedo, currentHistoryIndex, todoListHist
                         </li>
                     ))}
                 </ul>
+                
             </div>
         </div>
     )

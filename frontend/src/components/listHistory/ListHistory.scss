@@ -1,9 +1,31 @@
 @import "../../styles/base/_variables.scss";
 
-.m-sm {
-    margin: $margin-sm;
-}
+.listHistory-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    // align-items: center;
+    margin-top: $margin-md;
 
-.text-color {
-    color: $secondary-color;
+    .undo-redo-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .history-container {
+
+        h2 {
+            text-align: center;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+        }
+        li{
+            display: flex;
+            flex-direction: row;
+        }
+    }
 }

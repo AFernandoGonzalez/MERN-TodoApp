@@ -18,11 +18,11 @@ const App = () => {
   // Get Todos
   useEffect(() => {
     // code to fetch todos from API
-    // const fetchedTodos = [
-    //   { id: 1, title: "Learn React", completed: false },
-    //   { id: 2, title: "Build a Todo App", completed: true }
-    // ];
-    // setTodos(fetchedTodos);
+    const fetchedTodos = [
+      { id: 1, title: "Learn React", completed: false },
+      { id: 2, title: "Build a Todo App", completed: true }
+    ];
+    setTodos(fetchedTodos);
 
   }, []);
 
