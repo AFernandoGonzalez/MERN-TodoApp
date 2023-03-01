@@ -2,6 +2,7 @@ import React from 'react'
 import './ListHistory.scss'
 
 const ListHistory = ({ handleUndo, handleRedo, currentHistoryIndex, todoListHistory, handleHistoryClick }) => {
+    const currentTime = new Date();
     return (
         <div className='listHistory-container'>
             <div className="undo-redo-buttons">
@@ -18,32 +19,26 @@ const ListHistory = ({ handleUndo, handleRedo, currentHistoryIndex, todoListHist
                     <i className="fa-solid fa-rotate-right"></i>
                 </button>
             </div>
+
             <div className="history-container">
                 <h2>History</h2>
                 <ul>
                     {todoListHistory.map((todoList, index) => (
                         <li className='row' key={index}>
-                            <div className='left'>
-                                {index === currentHistoryIndex ? (
-                                    <strong>Latest Task Added: </strong>
-                                ) : (
-                                    <button
-                                        className='btn text-color'
-                                        onClick={() => handleHistoryClick(index)}
-                                    >
-                                    <i className="fa-solid fa-hand-point-left"></i>
-                                    </button>
-                                )}
-                            </div>
                             <div className='right'>
                                 {todoList.map((todo) => (
-                                    <p key={todo.id}>{todo.title}</p>
+                                    <p key={todo.id}>  
+                                        {todo.completed ? <i className="fa-regular fa-circle-check green"></i> : <i className="fa-regular fa-circle-xmark red"></i>}
+                                        {todo.title}
+                                    </p>
                                 ))}
                             </div>
                         </li>
+
                     ))}
+
                 </ul>
-                
+
             </div>
         </div>
     )
