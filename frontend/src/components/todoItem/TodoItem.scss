@@ -1,0 +1,63 @@
+@import "../../styles/base/variables";
+
+.todoItem-container {
+  display: flex;
+  width: 100%;
+
+  .todoItem {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    // margin-top: $margin-md;
+    margin-bottom: $margin-sm;
+    border: 2px solid $warning-color;
+    border-radius: $border-radius-xl;
+    padding: $padding-md;
+    background-color: $warning-color;
+
+    .todoTitle {
+      width: 100%;
+      margin-left: $margin-sm;
+      font-size: $font-md;
+    }
+
+    .todoCheckbox {
+      appearance: none; //the default disappears
+      border: 2px solid $default-color; // Green border
+      border-radius: $border-radius-md;
+      width: 30px;
+      height: 30px;
+      transition: border-color 0.3s ease-in-out;
+
+      &:checked {
+        background-color: $success-color;
+        // border-color: #93FFD8; // Red border
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+    //
+    .todoBtns {
+      display: flex;
+      flex-direction: column;
+
+      .edit,
+      .delete {
+        border: none;
+        font-size: $font-md;
+        color: $text-color;
+        background-color: $warning-color;
+        transition: all .5s ease;
+      }
+
+      .edit:hover{
+        color: $primary-color;
+      }
+      .delete:hover{
+        color: $danger-color;
+      }
+    }
+  }
+}

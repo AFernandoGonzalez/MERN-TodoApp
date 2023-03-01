@@ -1,0 +1,41 @@
+@import "../../styles/base/variables";
+
+.updateTodo-container {
+  display: flex;
+  width: 100%;
+  background-color: $warning-color;
+  margin-bottom: $margin-sm;
+  border: 2px solid $warning-color;
+  border-radius: $border-radius-xl;
+  padding: $padding-sm;
+
+  .updateItem {
+    font-size: $font-md;
+    width: 100%;
+    border: none;
+    background-color: $warning-color;
+    outline: none;
+    font-weight: 500;
+
+    .todoBtns {
+      display: flex;
+      flex-direction: column;
+
+      .edit,
+      .delete {
+        border: none;
+        font-size: $font-md;
+        color: $text-color;
+        background-color: $warning-color;
+        transition: all 0.5s ease;
+      }
+
+      .edit:hover {
+        color: $primary-color;
+      }
+      .delete:hover {
+        color: $danger-color;
+      }
+    }
+  }
+}

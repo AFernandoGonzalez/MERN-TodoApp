@@ -6,6 +6,8 @@ import Search from './components/searchTodo/Search';
 import ListHistory from './components/listHistory/ListHistory';
 import Header from './components/header/Header'
 
+import './App.scss'
+
 const App = () => {
   const [todos, setTodos] = useState([]);
   const [searchTodo, setSearchTodo] = useState('');
@@ -32,7 +34,7 @@ const App = () => {
 
   const handleUpdateTodo = (id, updatedTodo) => {
     const updatedTodos = todos.map(todo =>
-      todo.id === id ? { ...todo, ...updatedTodo} : todo);
+      todo.id === id ? { ...todo, ...updatedTodo } : todo);
     setTodos(updatedTodos);
     setTodoListHistory([...todoListHistory, updatedTodos]);
     setCurrentHistoryIndex(currentHistoryIndex + 1);
@@ -89,9 +91,11 @@ const App = () => {
 
   return (
     <div className="todo-app">
-      <Header/>
-      <Search handleSearch={handleSearch} />
-      <Filter handleFilter={handleFilter} />
+      <Header />
+      <div className='search-filter'>
+        <Search handleSearch={handleSearch} />
+        <Filter handleFilter={handleFilter} />
+      </div>
       <AddTodo addTodo={handleAddTodo} />
       <TodoList
         todos={searchedTodos}

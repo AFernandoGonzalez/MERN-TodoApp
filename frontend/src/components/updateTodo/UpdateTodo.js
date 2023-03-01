@@ -1,4 +1,5 @@
 import { React, useState } from 'react'
+import './UpdateTodo.scss'
 
 const UpdateTodo = ({ todo, handleUpdateTodo, handleCancel }) => {
   const [newTitle, setNewTitle] = useState(todo.title);
@@ -18,6 +19,8 @@ const UpdateTodo = ({ todo, handleUpdateTodo, handleCancel }) => {
       <form className='form'
         onSubmit={handleSubmit}>
         <input
+        maxLength={55}
+          className='updateItem'
           type='text'
           placeholder='Update Todo...'
           value={newTitle}

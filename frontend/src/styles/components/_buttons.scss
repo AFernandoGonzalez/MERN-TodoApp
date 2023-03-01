@@ -2,19 +2,19 @@
 
 .btn {
     display: inline-block;
-    padding: 0.75em 1.5em;
+    padding: $padding-sm;
+    margin: $margin-sm;
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-    border-radius: 50px;
-    // background-color: $btn-color ;
+    border-radius: $border-radius-md;
     color: $text-color;
     border: none;
     cursor: pointer;
   
     &:hover,
     &:focus {
-    //   background-color:  $btn-hover-color;
+      // background-color:  purple;
       outline: none;
     }
   

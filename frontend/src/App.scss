@@ -1,0 +1,8 @@
+@import "./styles/base/variables";
+
+.search-filter {
+    display: flex;
+    border-bottom: 2px solid $default-color;
+    margin-top: $margin-sm;
+    margin-bottom: $margin-sm;
+}

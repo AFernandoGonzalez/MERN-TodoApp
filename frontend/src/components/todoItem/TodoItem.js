@@ -1,6 +1,7 @@
 import { React, useState } from 'react'
 import UpdateTodo from '../updateTodo/UpdateTodo';
 import DeleteTodo from '../deleteTodo/DeleteTodo';
+import './TodoItem.scss'
 
 const TodoItem = ({ todo, handleUpdateTodo, deleteTodo }) => {
   const [isEditing, setEditing] = useState(false);
@@ -41,16 +42,17 @@ const TodoItem = ({ todo, handleUpdateTodo, deleteTodo }) => {
             onChange={handleToggle}
           />
           <h3 className='todoTitle'>{todo.title}</h3>
-          {/* <span>completed: </span> */}
-          <button
-            className='btn '
-            onClick={handleEdit}>
-            <i className="fa-regular fa-pen-to-square"></i>
-          </button>
-          <DeleteTodo
-            todo={todo}
-            deleteTodo={deleteTodo}
-          />
+          <div className='todoBtns'>
+            <button
+              className='edit'
+              onClick={handleEdit}>
+              <i className="fa-regular fa-pen-to-square"></i>
+            </button>
+            <DeleteTodo
+              todo={todo}
+              deleteTodo={deleteTodo}
+            />
+          </div>
         </div>
       )}
     </div>

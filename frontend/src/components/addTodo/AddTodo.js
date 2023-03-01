@@ -1,5 +1,7 @@
 import { React, useState } from 'react'
 import '../../styles/components/_buttons.scss'
+import '../../styles/components/_form.scss'
+import './AddTodo.scss'
 
 const AddTodo = ({ addTodo }) => {
   const [newTodo, setNewTodo] = useState("");
@@ -22,13 +24,14 @@ const AddTodo = ({ addTodo }) => {
       <form className='form add-todo-form' onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Add Todo..."
+          maxlength="55"
+          placeholder=" + Add Task"
           value={newTodo}
           onChange={(e) => setNewTodo(e.target.value)}
         />
-        <span className='form-alert'>{alert ? "Enter a task" : ""}</span>
-        <button className='btn btn-primary' type="submit"><i className="fa-thin fa-plus"></i></button>
+        {/* <button className='btn btn-primary' type="submit"><i className="fa-thin fa-plus"></i></button> */}
       </form>
+      <span className='form-alert'>{alert ? "Enter a task" : ""}</span>
     </div>
   );
 }

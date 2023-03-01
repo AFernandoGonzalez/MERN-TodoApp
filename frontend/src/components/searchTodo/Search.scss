@@ -1,0 +1,17 @@
+@import "../../styles/base/variables";
+
+.search-container {
+  width: 100%;
+}
+
+.searchbar {
+  display: flex;
+  margin: $margin-sm;
+  input[type="text" i] {
+    width: 100%;
+    border: none;
+    outline: none;
+  }
+}
+
+

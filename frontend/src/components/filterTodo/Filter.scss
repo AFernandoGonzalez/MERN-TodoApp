@@ -1,0 +1,14 @@
+@import "../../styles/base/variables";
+
+.filter-container {
+    display: flex;
+    margin: $margin-sm;
+
+    select {
+        border: none;
+        background: $default-color;
+        border-radius: $border-radius-sm;
+        outline: none;
+        padding: $padding-sm;
+    }
+}

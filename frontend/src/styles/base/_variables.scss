@@ -1,24 +1,28 @@
-// Colors
-
 // Global variables
-$primary-color: #2E3840;
-$secondary-color: #7DB9B6;
-$text-color: #F5F5F5;
+$primary-color: #2e3840;
+$secondary-color: #7db9b6;
+$text-color: #f5f5f5;
 // $hover-color: #7DB9B6;
-$disabled-color: #D8D9CF;
-$tl-bg-color: #F5EA5A;
-$hl-bg-color: #EDEDED;
+$disabled-color: #d8d9cf;
+$tl-bg-color: #f5ea5a;
+$hl-bg-color: #ededed;
 
-$btn-primary: #3AB0FF;
-$btn-hover-primary: #1C6DD0;
-$btn-danger: #EB455F;
+$btn-primary: #3ab0ff;
+$btn-hover-primary: #1c6dd0;
+$btn-danger: #eb455f;
 $btn-hover-danger: #ea314d;
 $btn-warning: #f8c83a;
 $btn-hover-warning: #ffc107;
+
 $success-color: #28a745;
-$danger-color: #EB455F;
+$danger-color: #eb455f;
 $warning-color: #ffc107;
 $info-color: #17a2b8;
+$default-color: #e6e6e6;
+
+$font-sm: 8px;
+$font-md: 16px;
+$font-lg: 24px;
 
 $margin-sm: 8px;
 $margin-md: 16px;
@@ -27,6 +31,11 @@ $margin-lg: 24px;
 $padding-sm: 8px;
 $padding-md: 16px;
 $padding-lg: 24px;
+
+$border-radius-sm: 8px;
+$border-radius-md: 16px;
+$border-radius-lg: 24px;
+$border-radius-xl: 32px;
 
 // Breakpoints
 $breakpoint-xs: 0;
