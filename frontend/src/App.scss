@@ -1,8 +1,24 @@
 @import "./styles/base/variables";
 
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  margin: $margin-sm auto;
+  padding: $padding-sm;
+  max-width: 500px; 
+
+}
+
 .search-filter {
-    display: flex;
-    border-bottom: 2px solid $default-color;
-    margin-top: $margin-sm;
-    margin-bottom: $margin-sm;
+  display: flex;
+  border-bottom: 2px solid $default-color;
+  margin-top: $margin-sm;
+  margin-bottom: $margin-sm;
+}
+
+@media only screen and (min-width: 600px) {
+  .todo-app {
+
+  }
+
 }

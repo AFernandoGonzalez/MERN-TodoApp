@@ -21,13 +21,15 @@ const ListHistory = ({ handleUndo, handleRedo, currentHistoryIndex, todoListHist
             </div>
 
             <div className="history-container">
-                <h2>History</h2>
+                <h2>History List</h2>
                 <ul>
                     {todoListHistory.map((todoList, index) => (
                         <li className='row' key={index}>
                             <div className='right'>
+                                <p>{index}</p>
                                 {todoList.map((todo) => (
-                                    <p key={todo.id}>  
+                                    <p key={todo.id}> 
+                                        
                                         {todo.completed ? <i className="fa-regular fa-circle-check green"></i> : <i className="fa-regular fa-circle-xmark red"></i>}
                                         {todo.title}
                                     </p>

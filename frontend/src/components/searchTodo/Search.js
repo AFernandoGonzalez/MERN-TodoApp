@@ -16,6 +16,7 @@ const Search = ({ handleSearch }) => {
                 <input
                     type="text"
                     id="search"
+                    placeholder="search your task"
                     value={searchValue}
                     onChange={handleChange}
                 />
