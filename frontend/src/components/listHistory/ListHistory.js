@@ -1,8 +1,13 @@
 import React from 'react'
 import './ListHistory.scss'
 
-const ListHistory = ({ handleUndo, handleRedo, currentHistoryIndex, todoListHistory, handleHistoryClick }) => {
+const ListHistory = ({ handleUndo, handleRedo, currentHistoryIndex, todoListHistory, setTodoListHistory, setCurrentHistoryIndex }) => {
 
+    const handleClearListHistory = () =>{
+        setTodoListHistory([]);
+        setCurrentHistoryIndex(-1);
+    }
+    
     return (
         <div className='listHistory-container'>
             <div className="undo-redo-buttons">
@@ -22,6 +27,7 @@ const ListHistory = ({ handleUndo, handleRedo, currentHistoryIndex, todoListHist
 
             <div className="history-container">
                 <h2>History List</h2>
+                <button onClick={handleClearListHistory} className='btn '>Clear All</button>
                 <ul>
                 {todoListHistory.filter(todoList => todoList.length > 0).map((todoList, index) => (
                         <li className='row' key={index}>

@@ -84,10 +84,10 @@ const App = () => {
     }
   };
 
-  const handleHistoryClick = (index) => {
-    setCurrentHistoryIndex(index);
-    setTodos(todoListHistory[index]);
-  };
+  // const handleHistoryClick = (index) => {
+  //   setCurrentHistoryIndex(index);
+  //   setTodos(todoListHistory[index]);
+  // };
 
   return (
     <div className="todo-app">
@@ -107,7 +107,9 @@ const App = () => {
         handleRedo={handleRedo}
         currentHistoryIndex={currentHistoryIndex}
         todoListHistory={todoListHistory}
-        handleHistoryClick={handleHistoryClick}
+        // handleHistoryClick={handleHistoryClick}
+        setTodoListHistory={setTodoListHistory}
+        setCurrentHistoryIndex={setCurrentHistoryIndex}
       />
     </div>
   );
