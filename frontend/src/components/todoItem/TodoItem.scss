@@ -29,6 +29,11 @@
       width: 30px;
       height: 30px;
       transition: border-color 0.3s ease-in-out;
+        background-color: $danger-color;
+
+      &:hover {
+        background-color: $default-color;
+      }
 
       &:checked {
         background-color: $success-color;

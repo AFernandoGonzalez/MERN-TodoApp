@@ -7,13 +7,13 @@ const ListHistory = ({ handleUndo, handleRedo, currentHistoryIndex, todoListHist
         <div className='listHistory-container'>
             <div className="undo-redo-buttons">
                 <button
-                    className='btn btn-warning m-sm'
+                    className='btn '
                     onClick={handleUndo}
                     disabled={currentHistoryIndex === 0}>
                     <i className="fa-solid fa-rotate-left"></i>
                 </button>
                 <button
-                    className='btn btn-warning m-sm'
+                    className='btn'
                     onClick={handleRedo}
                     disabled={currentHistoryIndex === todoListHistory.length - 1}>
                     <i className="fa-solid fa-rotate-right"></i>

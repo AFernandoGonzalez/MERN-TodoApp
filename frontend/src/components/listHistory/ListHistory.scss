@@ -10,6 +10,19 @@
     display: flex;
     align-items: center;
     margin-bottom: $margin-sm;
+
+    .btn {
+        background-color: $info-color;
+      &:hover {
+        background-color: $success-color;
+        outline: none;
+      }
+
+      &:disabled {
+        background-color: $disabled-color;
+        cursor: not-allowed;
+      }
+    }
   }
 
   .history-container {
@@ -31,7 +44,7 @@
       //   align-items: center;
       //   margin-bottom: $margin-sm;
       padding: $padding-sm;
-    //   margin: 2rem;
+      //   margin: 2rem;
       border-bottom: 2px solid $default-color;
 
       .index-todo {
