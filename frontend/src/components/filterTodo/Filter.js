@@ -11,7 +11,7 @@ const Filter = ({ handleFilter }) => {
 
   return (
     <div className='filter-container'>
-      {/* <label >Filter: </label> */}
+      <span>Filter by</span>
       <select id="filter" value={filterValue} onChange={handleChange}>
         <option value="all">All</option>
         <option value="completed">Completed</option>

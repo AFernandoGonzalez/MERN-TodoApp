@@ -25,8 +25,9 @@ const ListHistory = ({ handleUndo, handleRedo, currentHistoryIndex, todoListHist
                 <ul>
                 {todoListHistory.filter(todoList => todoList.length > 0).map((todoList, index) => (
                         <li className='row' key={index}>
+                        <p className='index-todo'>{index + 1}</p>
                             <div className='right'>
-                                <p>{index + 1}</p>
+                                {/* <p>{index + 1}</p> */}
                                 {todoList.map((todo) => (
                                     <p key={todo.id}> 
                                         

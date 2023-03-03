@@ -3,6 +3,15 @@
 .filter-container {
     display: flex;
     margin: $margin-sm;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        width: 40px;
+        font-size: $font-sm ;
+        // margin-right: $margin-sm;
+        padding-right: $padding-sm;
+    }
 
     select {
         border: none;

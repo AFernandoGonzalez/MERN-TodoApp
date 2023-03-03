@@ -27,11 +27,16 @@
   ul {
     li {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      //   justify-content: space-between;
+      //   align-items: center;
       //   margin-bottom: $margin-sm;
       padding: $padding-sm;
+    //   margin: 2rem;
       border-bottom: 2px solid $default-color;
+
+      .index-todo {
+        margin-right: $margin-sm;
+      }
 
       .right {
         display: flex;
