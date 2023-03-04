@@ -9,6 +9,14 @@
 
 }
 
+.header-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    // position: relative;
+}
+
 .search-filter {
   display: flex;
   border-bottom: 2px solid $default-color;

@@ -20,7 +20,13 @@ const App = () => {
     // code to fetch todos from API
     const fetchedTodos = [
       { id: 1, title: "Learn React", completed: false },
-      { id: 2, title: "Build a Todo App", completed: true }
+      { id: 2, title: "Build a Todo App", completed: true },
+      { id: 3, title: "Learn React", completed: false },
+      { id: 4, title: "Build a Todo App", completed: true },
+      { id: 5, title: "Learn React", completed: false },
+      { id: 6, title: "Build a Todo App", completed: true },
+      { id: 7, title: "Learn React", completed: false },
+      { id: 8, title: "Build a Todo App", completed: true }
     ];
     setTodos(fetchedTodos);
 
@@ -84,14 +90,20 @@ const App = () => {
     }
   };
 
-  // const handleHistoryClick = (index) => {
-  //   setCurrentHistoryIndex(index);
-  //   setTodos(todoListHistory[index]);
-  // };
 
   return (
     <div className="todo-app">
-      <Header />
+      <div className='header-section'>
+        <Header />
+        <ListHistory
+          handleUndo={handleUndo}
+          handleRedo={handleRedo}
+          currentHistoryIndex={currentHistoryIndex}
+          todoListHistory={todoListHistory}
+          setTodoListHistory={setTodoListHistory}
+          setCurrentHistoryIndex={setCurrentHistoryIndex}
+        />
+      </div>
       <div className='search-filter'>
         <Search handleSearch={handleSearch} />
         <Filter handleFilter={handleFilter} />
@@ -102,15 +114,7 @@ const App = () => {
         handleUpdateTodo={handleUpdateTodo}
         deleteTodo={handleDeleteTodo}
       />
-      <ListHistory
-        handleUndo={handleUndo}
-        handleRedo={handleRedo}
-        currentHistoryIndex={currentHistoryIndex}
-        todoListHistory={todoListHistory}
-        // handleHistoryClick={handleHistoryClick}
-        setTodoListHistory={setTodoListHistory}
-        setCurrentHistoryIndex={setCurrentHistoryIndex}
-      />
+
     </div>
   );
 }
