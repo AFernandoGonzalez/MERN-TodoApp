@@ -2,35 +2,45 @@ import { React, useState, useEffect } from 'react';
 import TodoList from './components/todoList/TodoList';
 import AddTodo from './components/addTodo/AddTodo';
 import Filter from './components/filterTodo/Filter';
+import Sort from './components/sortTodo/Sort';
 import Search from './components/searchTodo/Search';
 import ListHistory from './components/listHistory/ListHistory';
 import Header from './components/header/Header'
 
 import './App.scss'
+import UndoRedo from './components/undoredo/UndoRedo';
 
 const App = () => {
   const [todos, setTodos] = useState([]);
   const [searchTodo, setSearchTodo] = useState('');
   const [filterType, setFilterType] = useState('all');
-  const [todoListHistory, setTodoListHistory] = useState([todos]);
+  const [sortType, setSortType] = useState('newest');
+  const [todoListHistory, setTodoListHistory] = useState(prevHistory => {
+    if (prevHistory) {
+      return [todos, ...prevHistory];
+    } else {
+      return [todos];
+    }
+  });
   const [currentHistoryIndex, setCurrentHistoryIndex] = useState(0);
 
   // Get Todos
   useEffect(() => {
     // code to fetch todos from API
-    const fetchedTodos = [
-      { id: 1, title: "Learn React", completed: false },
-      { id: 2, title: "Build a Todo App", completed: true },
-      { id: 3, title: "Learn React", completed: false },
-      { id: 4, title: "Build a Todo App", completed: true },
-      { id: 5, title: "Learn React", completed: false },
-      { id: 6, title: "Build a Todo App", completed: true },
-      { id: 7, title: "Learn React", completed: false },
-      { id: 8, title: "Build a Todo App", completed: true }
-    ];
-    setTodos(fetchedTodos);
+    // const fetchedTodos = [
+    //   { id: 1, title: "1 Learn React", completed: false },
+    //   { id: 2, title: "2 Build a Todo App", completed: true },
+    //   { id: 3, title: "3 Learn React", completed: false },
+    //   { id: 4, title: "4 Build a Todo App", completed: true }
+    //   // { id: 5, title: "Learn React", completed: false },
+    //   // { id: 6, title: "Build a Todo App", completed: true },
+    //   // { id: 7, title: "Learn React", completed: false },
+    //   // { id: 8, title: "Build a Todo App", completed: true }
+    // ];
+    // setTodos(fetchedTodos);
 
   }, []);
+
 
   const handleAddTodo = (newTodo) => {
     setTodos([...todos, newTodo]);
@@ -61,7 +71,26 @@ const App = () => {
     setFilterType(filterTerm);
   };
 
-  const filteredTodos = todos.filter((todo) => {
+  const handleSort = (sortTerm) => {
+    setSortType(sortTerm);
+  };
+
+  const sortedTodos = [...todos].sort((a, b) => {
+    if (sortType === "newest") {
+      return b.id - a.id;
+    } else if (sortType === "oldest") {
+      return a.id - b.id;
+    } else if (sortType === "shortest") {
+      return a.title.length - b.title.length;
+    } else if (sortType === "longest") {
+      return b.title.length - a.title.length;
+    }
+    return 0;
+  });
+
+
+  // const filteredTodos = todos.filter((todo) => {
+  const filteredTodos = sortedTodos.filter((todo) => {
     if (filterType === "all") {
       return true;
     } else if (filterType === "completed" && todo.completed) {
@@ -71,6 +100,7 @@ const App = () => {
     }
     return false;
   });
+
 
   const searchedTodos = filteredTodos.filter((todo) =>
     todo.title.toLowerCase().includes(searchTodo.toLowerCase() || "")
@@ -96,8 +126,8 @@ const App = () => {
       <div className='header-section'>
         <Header />
         <ListHistory
-          handleUndo={handleUndo}
-          handleRedo={handleRedo}
+          // handleUndo={handleUndo}
+          // handleRedo={handleRedo}
           currentHistoryIndex={currentHistoryIndex}
           todoListHistory={todoListHistory}
           setTodoListHistory={setTodoListHistory}
@@ -106,7 +136,16 @@ const App = () => {
       </div>
       <div className='search-filter'>
         <Search handleSearch={handleSearch} />
-        <Filter handleFilter={handleFilter} />
+        <div>
+          <Sort handleSort={handleSort} />
+          <Filter handleFilter={handleFilter} />
+          <UndoRedo
+            handleUndo={handleUndo}
+            handleRedo={handleRedo}
+            currentHistoryIndex={currentHistoryIndex}
+            todoListHistory={todoListHistory}
+          />
+        </div>
       </div>
       <AddTodo addTodo={handleAddTodo} />
       <TodoList

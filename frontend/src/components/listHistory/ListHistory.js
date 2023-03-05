@@ -11,15 +11,13 @@ const ListHistory = ({ handleUndo, handleRedo, currentHistoryIndex, todoListHist
 
     return (
         <>
-            {/* <div className='list-open-close-btn'>{isHistoryListOpen ? <button className='btn-close' onClick={() => setIsHistoryListOpen(false)}>Close</button> : <button className='btn-open' onClick={() => setIsHistoryListOpen(true)}>History List</button>}</div> */}
             <div onClick={() => setIsHistoryListOpen(true)} className='list-open-close-btn'>Open</div>
             <div className='list-section'>
                 {isHistoryListOpen && (
-
                     <div className='listHistory-container'>
-                        <div className="btn-close" onClick={() => setIsHistoryListOpen(false)} ><i class="fa-regular fa-circle-xmark"></i></div>
+                        <div className="btn-close" onClick={() => setIsHistoryListOpen(false)} ><i className="fa-regular fa-circle-xmark"></i></div>
 
-                        <div className="undo-redo-buttons">
+                        {/* <div className="undo-redo-buttons">
                             <button
                                 className='btn '
                                 onClick={handleUndo}
@@ -32,7 +30,7 @@ const ListHistory = ({ handleUndo, handleRedo, currentHistoryIndex, todoListHist
                                 disabled={currentHistoryIndex === todoListHistory.length - 1}>
                                 <i className="fa-solid fa-rotate-right"></i>
                             </button>
-                        </div>
+                        </div> */}
 
                         <div className="history-container">
                             <h2>History List</h2>
@@ -54,11 +52,8 @@ const ListHistory = ({ handleUndo, handleRedo, currentHistoryIndex, todoListHist
                                             ))}
                                         </div>
                                     </li>
-
                                 ))}
-
                             </ul>
-
                         </div>
                     </div>
                 )}
