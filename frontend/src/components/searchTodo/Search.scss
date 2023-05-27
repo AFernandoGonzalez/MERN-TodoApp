@@ -2,16 +2,27 @@
 
 .search-container {
   width: 100%;
-}
-
-.searchbar {
   display: flex;
-  margin: $margin-sm;
-  input[type="text" i] {
+  flex-direction: column;
+
+  .searchbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    margin: $margin-md 0 ;
+
+    input[type="text" i] {
+      width: 100%;
+      border: none;
+      outline: none;
+      text-indent: $font-sm;
+      font-size: $font-md;
+    }
+  }
+  .hr {
+    border: 1px solid $default-color;
     width: 100%;
-    border: none;
-    outline: none;
+    height: 1px;
   }
 }
-
-

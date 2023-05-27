@@ -89,7 +89,6 @@ const App = () => {
   });
 
 
-  // const filteredTodos = todos.filter((todo) => {
   const filteredTodos = sortedTodos.filter((todo) => {
     if (filterType === "all") {
       return true;
@@ -126,8 +125,6 @@ const App = () => {
       <div className='header-section'>
         <Header />
         <ListHistory
-          // handleUndo={handleUndo}
-          // handleRedo={handleRedo}
           currentHistoryIndex={currentHistoryIndex}
           todoListHistory={todoListHistory}
           setTodoListHistory={setTodoListHistory}
